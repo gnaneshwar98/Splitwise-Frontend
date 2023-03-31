@@ -1,0 +1,37 @@
+.groupname{
+    margin-right:20px;
+    font-weight:bold;
+    font-size: large;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+.dropdown{
+    margin-top: 30px;
+}
+.billname{
+    margin-top: 40px;
+    font-weight:bold;
+    font-size: large;
+}
+.icheckbox{
+    margin-top: 20px;
+   
+}
+.billamount{
+    font-weight:bold;
+    font-size: large;
+    margin-top: 40px;
+   
+}
+.amount{
+    margin-top: 30px;
+}
+
+.button{
+    margin-top: 50px;
+    margin-left: 60px;
+    margin-bottom: 190px;
+}
+.date{
+    margin-top:30px;
+}

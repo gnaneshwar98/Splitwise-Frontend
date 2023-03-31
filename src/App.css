@@ -13,6 +13,60 @@
   }
 }
 
+.top-bar{
+  background-image: linear-gradient(79deg, #7439db, #C66FBC 48%, #F7944D);
+}
+.head{
+  margin-left: 600px;
+  margin-top: 10px;
+}
+.welcome{
+  margin-bottom: 10px;
+}
+.button{
+  margin-right: 100px;
+}
+
+
+.submitlogin{
+  margin-top:30px; 
+  margin-bottom: 10px;
+}
+.loginlabel{
+ margin-bottom: 400px;
+}
+.log{
+  margin-right: 30px;
+}
+
+.otpinput{
+  margin-top: 20px;
+}
+.otpclass{
+  margin-top: 40px;
+}
+.nameerror,.mobileerror{
+  color:red;
+}
+.name,.mobile,.email,.pic{
+  margin-top: 150px;
+}
+.submit{
+  margin-top: 50px;
+  margin-bottom: 200px;
+}
+.background{
+  background-image: linear-gradient(79deg, #7439db, #C66FBC 48%, #F7944D);
+}
+.content{
+  align-items:center;
+}
+.form-group{
+  margin-top: 100px;
+}
+.form-control{
+  margin-top: 50px;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
