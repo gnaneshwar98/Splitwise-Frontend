@@ -1,0 +1,38 @@
+.addfriends{
+    margin-bottom:10px;
+
+}
+.auth-form-container{
+    margin-bottom:230px
+}
+.heading{
+    color:brown
+}
+.name{
+     margin-top: 40px;
+    font-weight:bold;
+    font-size: large;
+}
+.mobile{
+    margin-top: 30px;
+    font-weight:bold;
+    font-size: large;
+}
+.email{
+    margin-top: 20px;
+    font-weight:bold;
+    font-size: large;
+}
+.inputname{
+    margin-top: 40px;
+}
+.inputmobile{
+    margin-top: 28px;
+}
+.inputemail{
+    margin-top:30px
+}
+.addfriendsbutton{
+    margin-top: 20px;
+}
+   

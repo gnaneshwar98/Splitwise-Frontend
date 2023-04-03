@@ -52,8 +52,8 @@ function Header() {
     Groups
   </a>
   <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="/groups">Add Group</a></li>
-    <li><a class="dropdown-item" href="#">Group Members</a></li>
+    <li>< a class="dropdown-item" href="/addgroup">Add Group</a></li>
+    <li><a class="dropdown-item" href="/addgroupmembers">Group Members</a></li>
     <li><a class="dropdown-item" href="#">MY Groups</a></li>
    
   </ul>

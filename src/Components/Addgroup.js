@@ -14,30 +14,37 @@ const Gropusub=(e)=>{
       <div className='container'>
         <div className='row'>
             <div className='col-md-4'>
-           <h2>Welcome Groups</h2>
+           <h2>Welcome To Groups</h2>
            <button className='btn btn-primary Groups' onClick={Gropusub} type="submit">create Groups</button>
             </div>
             {    
             show?<div className='col-md-4'>
                 <form className='formgroup'>
-                    <div className='from-group mt-5'>
-                        <label className='lgroupname'>Group Name : </label>
+                    <div className='row'>
+                        <div className='col-md-6'>
+                        <label className='lgroupname'>Group Name</label>
+                        <label className='lgroupamount'>Amount  </label>
+                        <label className='lgroupcomment'>Comments  </label>
+                        <label className='lgroupbill'>Bill Copy </label>
+                        <div className='row'>
+                            <div className='col-md-6'>
+                           
+                        
+                            </div>
+                            <div className='col-md-6'>
+                            <a className=' btn btn-warning but'>Save </a>
+                            </div>
+                        </div>
+                       
+                       
+                        </div>
+                        <div className='col-md-6'>
                         <input type="text" name="name" placeholder='Place Enter Group Name' className='form-control input'/>
-                    </div>
-                    <div className='from-group mt-3 '>
-                        <label>Amount : </label>
                         <input type="number" name="number" placeholder='Place Enter Amount' className='form-control input' />
-                    </div>
-                    <div className='from-group mt-3 '>
-                        <label>Comments : </label>
-                        <textarea name="comment" className='form-control textarea'></textarea>
-                    </div>
-                    <div className='from-group mt-3 text-center'>
-                        <label>Bill Copy : </label>
+                        <textarea name="comment" className='form-control textarea input' placeholder='Please Mention ur comments here'></textarea>
                         <input type="file" name="bill" className='form-control'/>
-                    </div>
-                    <div className='mt-3'>
-                        <button className='btn btn-warning'> Submit</button>
+                        </div>
+
                     </div>
                 </form>
             </div>:null
@@ -53,8 +60,8 @@ const Gropusub=(e)=>{
       <br></br>
       <div className='search'>
        <div className='col-md-6'>
-          <input type="text" id="search" className='' width="50px" placeholder='Search'></input>
-          <button type='button' className='btn btn-success'>Search</button>
+          {/*<input type="text" id="search" className='' width="50px" placeholder='Search'></input>
+          <button type='button' className='btn btn-success'>Search</button>*/}
        </div>
       <table  class="table table-dark" align="center">
       <thead>

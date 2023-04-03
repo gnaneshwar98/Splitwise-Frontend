@@ -16,6 +16,8 @@ import { redirect } from 'react-router-dom';
 import  "./Components/Regstyle.css";
 import Checkbox from './Components/Checkbox';
 
+
+
 function App() {
   const [currentForm, setCurrentForm] = useState('login');
 

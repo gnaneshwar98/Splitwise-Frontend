@@ -5,8 +5,14 @@ import { NavLink } from 'react-router-dom'
 
 export default function Dashboard() {
   return (
-    <div >
-     <div className='container'>
+    <div style={{ 
+      backgroundImage: `url("https://splitwise.files.wordpress.com/2019/07/blog-cover-image.png")`, 
+     backgroundRepeat:'no-repeat',
+     
+    }} >
+     
+      
+      <div className='container'>
       <div className='row'>
         <div className='col-md-4'>
          
