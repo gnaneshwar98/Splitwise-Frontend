@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import "./GroupMembersstyle.css";
+import "./GroupMembersstyles.css";
 import 'bootstrap/dist/css/bootstrap.min.css'
 const GroupMembers = () => {
   const [servicelist,setServiceList]=useState([{service:""}]);
