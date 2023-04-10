@@ -110,11 +110,11 @@ const GroupMembers = () => {
      <br></br>
 
      <div className='col-md-6'>
-          <input type="text" id="search" className='' width="50px" placeholder='Search'></input>
+          <input type="text" id="search"  width="50px" placeholder='Search'></input>
           <button type='button' className='btn btn-success'>Search</button>
        </div>
        <div className='tableheader'>
-     <table  class="table table-dark" align="center">
+     <table  className="table table-dark" align="center">
       <thead>
           <tr>
            <th scope="col">ID</th>

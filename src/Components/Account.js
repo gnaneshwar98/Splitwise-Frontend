@@ -32,7 +32,7 @@ export default function Account() {
             
             <div className='col-md-6'>
             <div>
-            <img src={file} class="rounded-circle" height="200px" width="300px"/>
+            <img src={file} className="rounded-circle" height="200px" width="300px"/>
             </div>
             <input type="text" className='iname' id="name" disabled value="Gnaneshwar"></input>
             <input type="text" className='imobile' disabled value="6281556143"></input>

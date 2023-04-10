@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import axios from "axios";
-import  "./Regstyle.css"
+import"./Regstyle.css";
 
 export function RegistrationHooks (props) {
     const[name,Changename] =useState("")
     const[mobile,Changemobile] =useState("")
     const[email,Changeemail] =useState("")
-    const[pic,Changepic] =useState("")
+   
     const[nameerror,setnameerror] =useState("")
     const[mobileerror,setmobileerror] =useState("")
     const[emailerror,setemailerror]=useState("")
@@ -60,15 +60,12 @@ export function RegistrationHooks (props) {
         setemailerror("Email is required");
       }
       const data ={
-        ID: 0,
-        Name: name,
-        Moblie_Number:mobile,
-        Email: email,
-        Status:1,
-        ProfilePic:pic
-      
+        id: 0,
+        name: name,
+        moblie_Number: mobile,
+        email: email 
       }
-      axios.post("https://localhost:7249/api/Register/register",data)
+      axios.post("https://localhost:7262/api/Register/register",data)
       .then(res=>{
        console.log(res);
        alert("Record inserted")})
@@ -129,19 +126,13 @@ export function RegistrationHooks (props) {
                       </div>
                  </div>
  
-                 <div className='row'>
-                     <div className='col-md-4'>
-                       <label htmlFor="pic" className='regpic'>Profile Pic</label>
-                     </div>
-                      <div className='col-md-8'>
-                         <input type="file" className="form-control regipic" value={pic} onChange={(e)=>Changepic(e.target.value)} />    
-                      </div>
-                 </div>
+                 
                  <div className='regsubmit'>
                  <button className='btn btn-primary'>Submit</button>
                  </div>
-                 <a className="btn btn-warning final" onClick={() => props.onFormSwitch('login')}>Already have an account? Login here.</a>
-                 
+                <div className='bottom'>
+                 <a className="btn btn-warning" onClick={() => props.onFormSwitch('login')}>Already have an account? Login here.</a>
+                 </div>
                  <div className='col-md-4'>
  
                  </div>   

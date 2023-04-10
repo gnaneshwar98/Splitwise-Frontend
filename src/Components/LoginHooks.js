@@ -1,24 +1,35 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import axios from 'axios'
+import AddFriends from './AddFriends';
+import "./loginhooks.css";
+
+import AuthContext from './AuthContext';
 
 export default function LoginHooks(props) {
 
     const[email,setemail]=useState("")
     const [show, setshow] = useState(false);
-    const[serverotp,setserverotp] =useState("")
+    
     const[userotp,setuserotp] =useState("")
+    const[user,setuser]=useState(null);
+    const {login} = useContext(AuthContext);
+    
    
+    
+
+  
 
     const Validateemail=(e)=>{
         e.preventDefault();
         const data ={
-            Email:email
+          email: email
        }
+      
      
-       axios.post("https://localhost:7249/api/Register/login",data)
+       axios.post("https://localhost:7262/api/Login/Emailverify",data)
       .then(res=>{
        alert(res.data);
-       setserverotp(res.data)
+      
 
       if(res.data==="Invalid User"){
         setshow(show)
@@ -34,22 +45,43 @@ export default function LoginHooks(props) {
        })
 
     }
-    const Loginvalidate=(e)=>{
-        e.preventDefault();
-        if(userotp==serverotp)
-        {
-            alert("Login Sucessful")
-           
-          
-           
-        }
-        else
-        {
-          
-           alert("Login Unsucessful")
-        }
 
-   }
+    const validateotp= async (e)=>{
+      e.preventDefault();
+      const data={ 
+        email:email,
+          otp: userotp
+      }
+      axios.post("https://localhost:7262/api/Login/OTPverify",data)
+      .then(res=>{
+       alert(res.data);  
+      })
+      .catch(res=>{
+        console.log(res.data);
+        alert("OTP not sent for verification")
+       })
+      
+
+
+      {/*const data2={
+        email: email
+}
+       
+
+    axios.post("https://localhost:7262/api/Account/login-token",data2)
+       .then(res=>{
+        console.log(res.data.accessToken);  
+        setuser(jwt_decode())
+       }).catch(res=>{
+        console.log(res.data);
+        
+       })*/}
+       let payload= {
+        email:email
+       }
+       await login(payload);
+
+  };
 
   return (
     <div>
@@ -61,7 +93,7 @@ export default function LoginHooks(props) {
               
             
             
-           <img src="https://www.terralogic.com/wp-content/themes/terralogic/img/brand-logo.svg" width="500" height="500"/>
+           <img src="https://assets.splitwise.com/assets/core/open-graph-preview-c1b55b0dc7c2b2d5bd6f40bbe34989f3eb2317843246727606cf3e96ee254609.png" width="600" height="400"/>
             </div>
             
               <div className='col-md-4'>
@@ -70,16 +102,18 @@ export default function LoginHooks(props) {
                 <div className='row '>
                 
                     <label >Enter Email</label>
-                  <input type="text" className='input' placeholder='Enter ur Email Address'value={email} onChange={(e)=>setemail(e.target.value)}/>
-
+                    <div >
+                  <input type="text"className='input'  placeholder='Enter ur Email Address'value={email} onChange={(e)=>setemail(e.target.value)}/>
+                  </div>
                   <div>
+                 
             {
                 show?<div>
          
                         <label className='otpclass'>OTP</label><br/>
                        <input  onChange={(e) => setuserotp(e.target.value)} type="text" placeholder="****" id="otp" className='otpinput' />
                        
-                       <a className='btn btn-primary log' onClick={Loginvalidate}>Log In</a>
+                       <a className='btn btn-primary log' onClick={validateotp}>Log In</a>
                        
                        
                </div> : null
@@ -89,7 +123,7 @@ export default function LoginHooks(props) {
                   <div>
                   <button className=" btn btn-outline-success submitlogin" >Submit</button>
                   <div className='loginlabel'>
-              <a className="btn btn-warning" onClick={() => props.onFormSwitch('register')}>Don't have an account? Register here.</a>
+              <a className="btn btn-warning link-btn" onClick={() => props.onFormSwitch('register')}>Don't have an account? Register here.</a>
               </div>
                   
                  </div>

@@ -3,10 +3,10 @@
   .regbackground{
     background-image: linear-gradient(79deg, #7439db, #C66FBC 48%, #F7944D);
   }
-.regimobile,.regiemail,.regipic{
-  margin-top:0px;
+.regmobile,.regemail,.regname{
+  margin-top:20px;
 }
-.reginame,.regimobile,.regiemail,.regipic{
+.reginame,.regimobile,.regiemail{
   margin-top:0px;
   margin-bottom:20px
 }
@@ -15,8 +15,8 @@
   margin-top:20px;
 }
   
-.final{
-  margin-bottom: 170px;
+.bottom{
+  margin-bottom: 180px;
 }
 .registration{
   margin-top:80px;

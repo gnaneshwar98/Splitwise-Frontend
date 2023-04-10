@@ -63,7 +63,7 @@ const Gropusub=(e)=>{
           {/*<input type="text" id="search" className='' width="50px" placeholder='Search'></input>
           <button type='button' className='btn btn-success'>Search</button>*/}
        </div>
-      <table  class="table table-dark" align="center">
+      <table  className="table table-dark" align="center">
       <thead>
           <tr>
            <th scope="col">ID</th>

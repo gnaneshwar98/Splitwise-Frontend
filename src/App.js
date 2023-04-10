@@ -15,6 +15,11 @@ import Routing from './Components/Routing';
 import { redirect } from 'react-router-dom';
 import  "./Components/Regstyle.css";
 import Checkbox from './Components/Checkbox';
+import Parentcomponent from './Components/Parentcomponent';
+import Childcomponent from './Components/Childcomponent';
+import { AuthContextProvider } from './Components/AuthContext';
+import LoginToken from './Components/LoginToken';
+import AddFriends from './Components/AddFriends';
 
 
 
@@ -26,16 +31,18 @@ function App() {
   }
   return (
      <div className="App">
-       {/*{
+     <AuthContextProvider>
+   {
        currentForm === "login" ? <LoginHooks onFormSwitch={toggleForm} /> : <RegistrationHooks onFormSwitch={toggleForm} />
-     }*/}
-    <Header/>
-    <Routing/>
-    <Footer/>
+     }
+  
+  {/* <Header/>
+    <Routing/>*/}
     
-    
-     
-    
+    </AuthContextProvider>
+   
+      
+   
     </div>
     
 

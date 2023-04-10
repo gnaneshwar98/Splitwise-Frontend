@@ -16,18 +16,18 @@ export default function Slidebar() {
                         <span className='fs-4'>Side Menu</span>
                     </a>
                     <hr className='text-white d-none d-sm-block'></hr>
-                    <ul class="nav nav-pills flex-column ">
-                        <li class="nav-item text-white">
-                            <a href="#" class="nav-link" aria-current="page">Add Friends</a>
+                    <ul className="nav nav-pills flex-column ">
+                        <li className="nav-item text-white">
+                            <a href="#" className="nav-link" aria-current="page">Add Friends</a>
                         </li><br/>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Group</a>
+                        <li className="nav-item">
+                            <a href="#" className="nav-link">Group</a>
                         </li>
-                        <li class="nav-item ">
-                            <a href="#" class="nav-link">Group Members</a>
+                        <li className="nav-item ">
+                            <a href="#" className="nav-link">Group Members</a>
                         </li>
-                        <li class="nav-item ">
-                            <a href="#" class="nav-link">Account</a>
+                        <li className="nav-item ">
+                            <a href="#"className="nav-link">Account</a>
                         </li>
                     </ul>
                  </div>

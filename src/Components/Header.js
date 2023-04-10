@@ -3,7 +3,7 @@ import "./Headstyle.css"
 import { NavLink } from 'react-router-dom'
 
 
-function Header() {
+function Header(props) {
   return (
     <header className='top'>
     <div className='header'>
@@ -35,10 +35,10 @@ function Header() {
   <div className="collapse navbar-collapse justify-content-end" id="navbarText">
     <ul className="navbar-nav ">
       <li className="nav-item ">
-        <NavLink className="nav-link" to="/"><i class="fa-solid fa-house"></i>Home </NavLink>
+        <NavLink className="nav-link" to="/"><i className="fa-solid fa-house"></i>Home </NavLink>
       </li>
       <li className="nav-item">
-        <NavLink className="nav-link" to="/addfriends"><i class="fa-solid fa-address-book"></i>Add Friends</NavLink>
+        <NavLink className="nav-link" to="/addfriends"><i className="fa-solid fa-address-book"></i>Add Friends</NavLink>
       </li>
       {/*<li className="nav-item ">
         <NavLink className="nav-link" to="/groups">
@@ -47,14 +47,14 @@ function Header() {
   </li>*/}
  
   <li>
-  <div class="dropdown-center">
-  <a class=" dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user-group"></i>
+  <div className="dropdown-center">
+  <a className=" dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i className="fa-solid fa-user-group"></i>
     Groups
   </a>
-  <ul class="dropdown-menu">
-    <li>< a class="dropdown-item" href="/addgroup">Add Group</a></li>
-    <li><a class="dropdown-item" href="/addgroupmembers">Group Members</a></li>
-    <li><a class="dropdown-item" href="#">MY Groups</a></li>
+  <ul className="dropdown-menu">
+    <li>< a className="dropdown-item" href="/addgroup">Add Group</a></li>
+    <li><a className="dropdown-item" href="/addgroupmembers">Group Members</a></li>
+    <li><a className="dropdown-item" href="#">MY Groups</a></li>
    
   </ul>
 </div>
@@ -62,8 +62,9 @@ function Header() {
      
       
       <li className="nav-item">
-        <NavLink className="nav-link"to="/account"><i class="fa-solid fa-user"></i>Account</NavLink>
+        <NavLink className="nav-link"to="/account"><i className="fa-solid fa-user"></i>Account</NavLink>
       </li>
+      
     </ul>
    
   </div>
