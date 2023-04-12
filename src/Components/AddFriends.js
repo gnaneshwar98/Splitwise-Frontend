@@ -3,6 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import "./AddFriendsstyle.css"
 import axios from "axios";
 import AuthContext from "./AuthContext";
+import Header from "./Header";
+import Footer from "./Footer";
 
 function AddFriends(){
     
@@ -39,7 +41,8 @@ function AddFriends(){
      
   
     return(
-    
+        <div>
+          <Header/>
         <div className="auth-form-container">
             <h2 className="heading"><u>User Contacts</u></h2>
             <div className="container">
@@ -84,6 +87,8 @@ function AddFriends(){
               </form>
             </div>
        
+        </div>
+        <Footer/>
         </div>
     )
 };        

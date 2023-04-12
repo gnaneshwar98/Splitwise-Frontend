@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import "./GroupMembersstyles.css";
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Header from './Header';
+import Footer from './Footer';
+
 const GroupMembers = () => {
   const [servicelist,setServiceList]=useState([{service:""}]);
   const [show,setshow]=useState(false);
@@ -31,6 +34,7 @@ const GroupMembers = () => {
   }
   return (
     <div>
+      <Header/>
     <div className='container'>
       <div className='row'>
         <div className='col-md-4'>
@@ -130,6 +134,7 @@ const GroupMembers = () => {
       
       </table>
       </div>
+      <Footer/>
 
     </div>
   )

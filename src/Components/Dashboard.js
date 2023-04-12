@@ -2,9 +2,13 @@ import React from 'react'
 import "./Dashboardstyle.css"
 import "./Createbill"
 import { NavLink } from 'react-router-dom'
+import Footer from './Footer'
+import Header from './Header'
 
-export default function Dashboard() {
+const  Dashboard=()=> {
   return (
+    <div>
+     <Header/>
     <div style={{ 
       backgroundImage: `url("https://splitwise.files.wordpress.com/2019/07/blog-cover-image.png")`, 
      backgroundRepeat:'no-repeat',
@@ -28,5 +32,9 @@ export default function Dashboard() {
      </div>
       
     </div>
+    <Footer/>
+    
+    </div>
   )
 }
+export default Dashboard

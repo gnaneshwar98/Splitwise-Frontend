@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import "./Accountstyle.css"
+import Header from './Header';
+import Footer from './Footer';
 
 export default function Account() {
   const [file, setFile] = useState();
@@ -10,6 +12,8 @@ export default function Account() {
     setFile(URL.createObjectURL(e.target.files[0]));
 }
   return (
+    <div>
+      <Header/>
      <div className='profile'>
       <div className='container'>
         <div className='row'>
@@ -50,6 +54,8 @@ export default function Account() {
           
         </div>
         </div>
+        </div>
+        <Footer/>
         </div>
     
   

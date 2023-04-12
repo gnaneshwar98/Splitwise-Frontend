@@ -1,10 +1,21 @@
 import React from 'react'
 import "./Headstyle.css"
 import { NavLink } from 'react-router-dom'
+import Footer from './Footer'
+import Dashboard from './Dashboard'
+import { useNavigate } from "react-router-dom";
 
 
 function Header(props) {
+  const navigate = useNavigate();
+
+  const Logingout =(e)=>{
+    navigate("/");
+    localStorage.clear();
+    
+  }
   return (
+    <div>
     <header className='top'>
     <div className='header'>
         <div className='container'>
@@ -17,7 +28,7 @@ function Header(props) {
                 </div>
                 <div className='col-md-2'>
                  
-                <button className='btn btn-danger logout'>Logout</button>
+                <a className='btn btn-danger logout' onClick={Logingout}>Logout</a>
                 </div>
             </div>
         </div>
@@ -35,7 +46,7 @@ function Header(props) {
   <div className="collapse navbar-collapse justify-content-end" id="navbarText">
     <ul className="navbar-nav ">
       <li className="nav-item ">
-        <NavLink className="nav-link" to="/"><i className="fa-solid fa-house"></i>Home </NavLink>
+        <NavLink className="nav-link" to="/dashboard"><i className="fa-solid fa-house"></i>Home </NavLink>
       </li>
       <li className="nav-item">
         <NavLink className="nav-link" to="/addfriends"><i className="fa-solid fa-address-book"></i>Add Friends</NavLink>
@@ -81,6 +92,9 @@ function Header(props) {
   
   
    </header>
+   
+   </div>
+   
   )
 }
 

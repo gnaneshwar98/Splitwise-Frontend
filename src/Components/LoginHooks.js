@@ -1,18 +1,26 @@
+
 import React, { useContext, useState } from 'react'
 import axios from 'axios'
 import AddFriends from './AddFriends';
 import "./loginhooks.css";
+import Routing from './Routing';
+import { useNavigate } from "react-router-dom";
 
 import AuthContext from './AuthContext';
+import Dashboard from './Dashboard';
+import Header from './Header';
 
-export default function LoginHooks(props) {
+
+const  LoginHooks=()=> {
 
     const[email,setemail]=useState("")
     const [show, setshow] = useState(false);
+    const [open, setopen] = useState(true);
     
     const[userotp,setuserotp] =useState("")
     const[user,setuser]=useState(null);
     const {login} = useContext(AuthContext);
+    const navigate = useNavigate();
     
    
     
@@ -54,12 +62,18 @@ export default function LoginHooks(props) {
       }
       axios.post("https://localhost:7262/api/Login/OTPverify",data)
       .then(res=>{
-       alert(res.data);  
-      })
-      .catch(res=>{
-        console.log(res.data);
-        alert("OTP not sent for verification")
-       })
+       
+      console.log(res.data);
+       alert(res.data); 
+       if(res.data=== "Login Successful")
+       {
+        navigate("/dashboard");
+       }
+       
+       });
+
+      
+    
       
 
 
@@ -80,10 +94,12 @@ export default function LoginHooks(props) {
         email:email
        }
        await login(payload);
+      
 
   };
 
   return (
+    
     <div>
          <div className="background">
           <div className='container '>
@@ -118,12 +134,13 @@ export default function LoginHooks(props) {
                        
                </div> : null
              }
+            
         </div> 
                   </div>
                   <div>
                   <button className=" btn btn-outline-success submitlogin" >Submit</button>
                   <div className='loginlabel'>
-              <a className="btn btn-warning link-btn" onClick={() => props.onFormSwitch('register')}>Don't have an account? Register here.</a>
+              <a className="btn btn-warning link-btn" href="/registration">Don't have an account? Register here.</a>
               </div>
                   
                  </div>
@@ -149,3 +166,4 @@ export default function LoginHooks(props) {
     </div>
   )
 }
+export default LoginHooks

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import axios from "axios";
 import"./Regstyle.css";
 
-export function RegistrationHooks (props) {
+export function RegistrationHooks () {
     const[name,Changename] =useState("")
     const[mobile,Changemobile] =useState("")
     const[email,Changeemail] =useState("")
@@ -131,7 +131,7 @@ export function RegistrationHooks (props) {
                  <button className='btn btn-primary'>Submit</button>
                  </div>
                 <div className='bottom'>
-                 <a className="btn btn-warning" onClick={() => props.onFormSwitch('login')}>Already have an account? Login here.</a>
+                 <a className="btn btn-warning" href="/">Already have an account? Login here.</a>
                  </div>
                  <div className='col-md-4'>
  

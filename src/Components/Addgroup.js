@@ -1,5 +1,9 @@
-import React, { useState } from 'react'
+import React,{useContext, useState} from "react";
 import"./Addgroupstyle.css"
+import AuthContext from "./AuthContext";
+import Header from "./Header";
+import Footer from "./Footer";
+
 
  function Addgroup() {
     const [show,setshow]=useState(false);
@@ -9,12 +13,14 @@ const Gropusub=(e)=>{
     e.preventDefault();
     setshow(!show)
    }
+  
   return (
     <div>
+      <Header/>
       <div className='container'>
         <div className='row'>
             <div className='col-md-4'>
-           <h2>Welcome To Groups</h2>
+           <h2>Welcome To Groups </h2>
            <button className='btn btn-primary Groups' onClick={Gropusub} type="submit">create Groups</button>
             </div>
             {    
@@ -79,7 +85,7 @@ const Gropusub=(e)=>{
 
             
       
-     
+     <Footer/>
     </div>
   )
 }
